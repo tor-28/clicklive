@@ -172,7 +172,8 @@ nav a:hover {
 
 .contato-lista li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center; /* <- ESSENCIAL PARA CENTRALIZAR TODO O BLOCO */
   gap: 12px;
 }
 
