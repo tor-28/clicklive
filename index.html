@@ -1,102 +1,168 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click Live - Agência de Performance</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', sans-serif;
-            background-color: #ffffff;
-            color: #333;
-        }
-        header {
-            background-color: #FF6C00;
-            color: #fff;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav a {
-            margin: 0 1rem;
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .hero {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: #f4f4f4;
-        }
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            padding: 3rem 2rem;
-            background: #fff;
-        }
-        .card {
-            background: #f8f9fa;
-            border-radius: 12px;
-            padding: 2rem;
-            width: 250px;
-            text-align: center;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        .section {
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-        .section h2 {
-            margin-bottom: 1rem;
-            color: #FF6C00;
-        }
-        .contact p {
-            margin: 0.5rem 0;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #FF6C00;
-            color: #fff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-top: 1rem;
-            font-weight: bold;
-        }
-        .list {
-            text-align: left;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .list li {
-            margin-bottom: 0.5rem;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Live - Agência de Performance</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #ffffff;
+      color: #333;
+    }
+    header {
+      background-color: #FF6C00;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: #f4f4f4;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 3rem 2rem;
+      background: #fff;
+    }
+    .card {
+      background: #f8f9fa;
+      border-radius: 12px;
+      padding: 2rem;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .section h2 {
+      margin-bottom: 1rem;
+      color: #FF6C00;
+    }
+    .contact p {
+      margin: 0.5rem 0;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #FF6C00;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    .list {
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .list li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h2>Click Live</h2>
-        <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#resultados">Resultados</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#institucional">Institucional</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
+  <header>
+    <h2>Click Live</h2>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#institucional">Institucional</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
-    <section class="hero">
-        <h
+  <section class="hero" id="sobre">
+    <h1>Potencialize suas vendas com a Click Live</h1>
+    <p>A agência que transforma lives em resultados reais na Shopee. Em breve também no Mercado Livre.</p>
+    <a href="#contato" class="btn">Quero ser afiliado</a>
+  </section>
+
+  <section class="cards" id="resultados">
+    <div class="card">
+      <h3>+300</h3>
+      <p>Afiliados ativos</p>
+    </div>
+    <div class="card">
+      <h3>145 mil</h3>
+      <p>Pedidos no mês</p>
+    </div>
+    <div class="card">
+      <h3>R$ 8,5 mi</h3>
+      <p>em vendas</p>
+    </div>
+    <div class="card">
+      <h3>47,3x</h3>
+      <p>ROI médio</p>
+    </div>
+  </section>
+
+  <section class="section" id="servicos">
+    <h2>O que fazemos</h2>
+    <p>Gestão e treinamento de afiliados • Acompanhamento de lives • Relatórios por Sub ID • Acesso ao sistema ClickLive Analisador</p>
+  </section>
+
+  <section class="section" id="institucional">
+    <h2>Institucional</h2>
+    <div class="list">
+      <h3>Quem somos</h3>
+      <p>A Click Live é uma agência especializada em marketing de performance ao vivo, com foco em Shopee Live, expansão para Mercado Livre, e treinamentos em vendas para criadores e afiliados. Unimos tecnologia, dados e conteúdo para escalar resultados reais.</p>
+
+      <h3>Modelo de negócio</h3>
+      <ul>
+        <li>Agência de performance e dados, comissionada por vendas</li>
+        <li>Recrutamento, capacitação e ativação de criadores</li>
+        <li>Gestão de campanhas, links e lives</li>
+        <li>Painel próprio de análise: ClickLive Analisador</li>
+      </ul>
+
+      <h3>Modelo educacional para creators</h3>
+      <ul>
+        <li>Trilha de treinamento \"Do 0 ao TOP 20\"</li>
+        <li>Mentorias em grupo por nicho</li>
+        <li>Acesso ao painel ClickLive Analisador</li>
+        <li>Suporte com estratégias de lives e produtos âncora</li>
+      </ul>
+
+      <h3>Objetivo com novas plataformas</h3>
+      <ul>
+        <li>Ativar criadores no Mercado Livre e TikTok</li>
+        <li>Replicar modelo de sucesso com dados e performance</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section contact" id="contato">
+    <h2>Fale com a gente</h2>
+    <p>📱 WhatsApp: <strong>81 99305-4646</strong></p>
+    <p>✉️ E-mail: <strong>contato@clicklive.shop</strong></p>
+    <p>🔗 Instagram: <strong>@clicklive</strong></p>
+  </section>
+</body>
+</html>
