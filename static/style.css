@@ -178,7 +178,9 @@ nav a:hover {
 }
 
 .contato-lista .icon {
-  width: 26px;
+  width: 28px;
+  min-width: 28px;
   text-align: center;
   font-size: 1.2rem;
+  display: inline-block;
 }
