@@ -28,11 +28,12 @@ header {
 }
 
 .logo {
-  height: 45px;
-  max-width: 160px;
+  height: 60px;
+  max-width: 220px;
   object-fit: contain;
 }
 
+/* NAVEGAÇÃO */
 nav a {
   margin-left: 1.5rem;
   color: #fff;
@@ -112,7 +113,7 @@ nav a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* SECTION GERAL */
+/* SEÇÕES */
 .section {
   padding: 3rem 2rem;
   text-align: center;
@@ -187,5 +188,9 @@ nav a:hover {
   .cards {
     flex-direction: column;
     align-items: center;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
   }
 }
