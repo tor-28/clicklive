@@ -18,7 +18,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .header-content {
@@ -26,7 +25,6 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  flex-wrap: wrap;
 }
 
 .logo {
@@ -36,17 +34,10 @@ header {
   filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.6));
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px;
-}
-
 nav a {
   color: #fff;
   text-decoration: none;
-  margin: 5px 10px;
+  margin-left: 20px;
   font-weight: bold;
   transition: color 0.3s ease;
 }
@@ -62,7 +53,7 @@ nav a:hover {
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 20px;
 }
 
@@ -94,17 +85,16 @@ nav a:hover {
   justify-content: center;
   padding: 50px 20px;
   background: rgba(255, 255, 255, 0.05);
-  gap: 20px;
 }
 
 .card {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 15px;
   padding: 30px;
+  margin: 10px;
   text-align: center;
   min-width: 200px;
   transition: transform 0.3s ease;
-  flex: 1 1 200px;
 }
 
 .card:hover {
@@ -124,7 +114,7 @@ nav a:hover {
 }
 
 .section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
   text-align: center;
   color: #ffcc00;
@@ -146,7 +136,7 @@ nav a:hover {
 
 .section h3,
 .list h3 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-top: 30px;
   color: #ffcc00;
   text-align: center;
@@ -160,6 +150,7 @@ nav a:hover {
   border-radius: 12px;
 }
 
+/* NOVO BLOCO - LISTA DE CONTATO */
 .contact {
   text-align: center;
   background: rgba(0, 0, 0, 0.7);
@@ -171,81 +162,42 @@ nav a:hover {
   list-style: none;
   padding: 0;
   margin-top: 20px;
-  max-width: 500px;
+  max-width: 480px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .contato-lista li {
   display: flex;
   align-items: center;
-  font-size: 1.1rem;
-  gap: 10px;
-  justify-content: flex-start;
+  justify-content: center; /* <- ESSENCIAL PARA CENTRALIZAR TODO O BLOCO */
+  gap: 12px;
 }
 
-.contato-lista .coluna-icon {
+.coluna-icon {
   width: 28px;
   min-width: 28px;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  margin-top: 3px;
 }
 
-.contato-lista .coluna-texto {
-  text-align: left;
+.coluna-texto {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.4;
 }
 
-/* RESPONSIVO PARA MOBILE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-
-  .card {
-    min-width: 90%;
-  }
-
-  .section {
-    padding: 40px 20px;
-  }
-
-  .logo {
-    height: 60px;
-    margin: 10px auto;
-  }
-
-  nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .section h2 {
-    font-size: 1.6rem;
-  }
-
-  .section p,
-  .section ul {
-    font-size: 1rem;
-  }
-
-  .contato-lista {
-    align-items: flex-start;
-  }
-
-  .contato-lista li {
-    flex-direction: row;
-    align-items: flex-start;
-  }
+.contato-descricao {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
