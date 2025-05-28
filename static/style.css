@@ -74,11 +74,12 @@ nav a:hover {
   text-decoration: none;
   font-weight: bold;
   margin-top: 1.5rem;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
   background-color: #e65c00;
+  transform: scale(1.05);
 }
 
 /* CARDS */
@@ -102,7 +103,7 @@ nav a:hover {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.03);
 }
 
 .card h3 {
@@ -149,6 +150,27 @@ nav a:hover {
 .contact p {
   margin: 0.5rem 0;
   font-size: 1.1rem;
+}
+
+/* ANIMAÇÕES */
+.section, .cards, .hero, .contact, .card, nav a, .btn {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.section:nth-of-type(1) { animation-delay: 0.1s; }
+.section:nth-of-type(2) { animation-delay: 0.2s; }
+.cards { animation-delay: 0.3s; }
+.hero { animation-delay: 0.1s; }
+.card { animation-delay: 0.4s; }
+.contact { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* RESPONSIVO */
