@@ -51,6 +51,8 @@ nav a:hover {
   text-align: center;
   padding: 5rem 2rem;
   background: #f9f9f9;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
 }
 
 .hero h1 {
@@ -83,14 +85,23 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+/* BLOCOS COM FUNDO MODERNO */
+.section, .cards, .contact {
+  background-color: #ffffff;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 3rem 2rem;
+  width: 90%;
+  max-width: 1000px;
+}
+
 /* CARDS */
 .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-  padding: 4rem 2rem;
-  background: #fff;
 }
 
 .card {
@@ -113,19 +124,14 @@ nav a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* SEÇÕES */
-.section {
-  padding: 3rem 2rem;
-  text-align: center;
-}
-
+/* TITULOS DE SEÇÃO */
 .section h2 {
   color: #FF6C00;
   margin-bottom: 1rem;
   font-size: 2rem;
 }
 
-/* LISTA */
+/* LISTAS */
 .list {
   text-align: left;
   max-width: 800px;
