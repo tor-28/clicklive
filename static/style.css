@@ -396,6 +396,7 @@ nav a:hover{
   grid-template-columns:repeat(2,1fr);
   gap:20px;
   margin-top:28px;
+  align-items:stretch;
 }
 
 .operation-card{
@@ -414,38 +415,38 @@ nav a:hover{
 
 .operation-image{
   width:100%;
-  height:290px;
+  height:340px;
   overflow:hidden;
-  background:rgba(255,255,255,0.02);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0;
 }
 
 .operation-image img{
   width:100%;
   height:100%;
-  object-fit:cover;
-  object-position:center top;
   display:block;
-}
-
-/* Ajuste fino individual das imagens da seção operação */
-.operation-card:nth-child(1) .operation-image img{
-  object-position:center 18%;
-}
-
-.operation-card:nth-child(2) .operation-image img{
+  object-fit:contain;
   object-position:center center;
+  background:#0b1018;
 }
 
+/* Dashboard continua bem preenchido */
 .operation-card:nth-child(3) .operation-image img{
+  object-fit:cover;
   object-position:center center;
 }
 
-.operation-card:nth-child(4) .operation-image img{
-  object-position:center 22%;
+/* Último card ocupando largura total para não sobrar vazio */
+.operation-card:last-child{
+  grid-column:1 / -1;
 }
 
-.operation-card:nth-child(5) .operation-image img{
-  object-position:center 14%;
+.operation-card:last-child .operation-image{
+  height:360px;
 }
 
 .operation-content{
@@ -714,6 +715,10 @@ footer{
     max-width:100%;
     min-width:280px;
   }
+
+  .operation-card:last-child{
+    grid-column:auto;
+  }
 }
 
 @media (max-width: 760px){
@@ -772,15 +777,19 @@ footer{
   }
 
   .operation-image{
-    height:250px;
+    height:300px;
   }
 
-  .operation-card:nth-child(1) .operation-image img,
-  .operation-card:nth-child(2) .operation-image img,
-  .operation-card:nth-child(3) .operation-image img,
-  .operation-card:nth-child(4) .operation-image img,
-  .operation-card:nth-child(5) .operation-image img{
-    object-position:center center;
+  .operation-card:nth-child(3) .operation-image img{
+    object-fit:contain;
+  }
+
+  .operation-card:last-child{
+    grid-column:auto;
+  }
+
+  .operation-card:last-child .operation-image{
+    height:300px;
   }
 
   .contact-wrap h2{
