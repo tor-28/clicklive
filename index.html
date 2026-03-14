@@ -9,7 +9,7 @@
   <style>
     :root{
       --bg:#05070b;
-      --card:rgba(10,14,22,0.82);
+      --card:rgba(10,14,22,0.84);
       --card-soft:rgba(255,255,255,0.04);
       --stroke:rgba(255,255,255,0.08);
       --text:#f5f7fb;
@@ -36,7 +36,7 @@
       font-family:Arial, Helvetica, sans-serif;
       color:var(--text);
       background:
-        linear-gradient(rgba(3,7,13,0.72), rgba(3,7,13,0.86)),
+        linear-gradient(rgba(3,7,13,0.72), rgba(3,7,13,0.88)),
         url("static/fundo_clicklive.png") center center / cover no-repeat fixed;
       overflow-x:hidden;
     }
@@ -50,7 +50,7 @@
       position:sticky;
       top:0;
       z-index:100;
-      background:rgba(3,7,13,0.72);
+      background:rgba(3,7,13,0.74);
       backdrop-filter:blur(14px);
       -webkit-backdrop-filter:blur(14px);
       border-bottom:1px solid rgba(255,255,255,0.05);
@@ -59,7 +59,7 @@
     .header-content{
       width:min(var(--max-width), calc(100% - 40px));
       margin:0 auto;
-      min-height:108px;
+      min-height:118px;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -69,11 +69,11 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:18px;
+      gap:20px;
     }
 
     .logo{
-      height:94px;
+      height:120px;
       width:auto;
       object-fit:contain;
       display:block;
@@ -88,7 +88,7 @@
     }
 
     .brand-text strong{
-      font-size:32px;
+      font-size:34px;
       color:#fff;
       letter-spacing:-0.9px;
       font-weight:900;
@@ -121,8 +121,338 @@
       color:#ffbf5a;
     }
 
+    .hero{
+      position:relative;
+      padding:82px 0 54px;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at top left, rgba(255,140,0,0.18), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(255,140,0,0.10), transparent 26%);
+      pointer-events:none;
+    }
+
+    .hero-inner{
+      width:min(var(--max-width), calc(100% - 40px));
+      margin:0 auto;
+      position:relative;
+      z-index:2;
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:26px;
+      align-items:center;
+    }
+
+    .hero-left{
+      background:rgba(10,14,22,0.58);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:32px;
+      padding:36px;
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      box-shadow:var(--shadow);
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      color:#ffd89a;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.8px;
+      text-transform:uppercase;
+      margin-bottom:22px;
+    }
+
+    .hero h1{
+      font-size:clamp(38px, 5vw, 72px);
+      line-height:1.02;
+      letter-spacing:-2px;
+      margin-bottom:22px;
+      max-width:780px;
+      font-weight:900;
+    }
+
+    .hero .highlight{
+      color:#ffad33;
+    }
+
+    .hero p{
+      font-size:18px;
+      color:var(--muted);
+      line-height:1.72;
+      max-width:760px;
+      margin-bottom:28px;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:15px 24px;
+      border-radius:999px;
+      font-weight:900;
+      transition:all .18s ease;
+      border:none;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:linear-gradient(180deg, #ffd400, #ffbf00);
+      color:#111;
+      box-shadow:0 10px 25px rgba(255,204,0,0.22);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      filter:brightness(1.03);
+    }
+
+    .btn-secondary{
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.10);
+      color:#fff;
+    }
+
+    .btn-secondary:hover{
+      transform:translateY(-2px);
+      border-color:rgba(255,191,90,0.5);
+    }
+
+    .hero-right{
+      display:grid;
+      gap:18px;
+    }
+
+    .hero-stat{
+      background:rgba(7,13,24,0.82);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:26px;
+      padding:28px 26px;
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+
+    .hero-stat .label{
+      display:block;
+      color:#97a8c5;
+      font-size:13px;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-bottom:12px;
+    }
+
+    .hero-stat .number{
+      font-size:clamp(34px, 4vw, 56px);
+      font-weight:900;
+      color:#fff;
+      line-height:1.05;
+      margin-bottom:10px;
+      letter-spacing:-1.5px;
+    }
+
+    .hero-stat p{
+      margin:0;
+      color:#d0d8e6;
+      font-size:15px;
+      line-height:1.65;
+    }
+
+    .metrics{
+      padding:8px 0 34px;
+    }
+
+    .cards{
+      width:min(var(--max-width), calc(100% - 40px));
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .card{
+      background:rgba(8,10,16,0.76);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:24px;
+      padding:28px 24px;
+      text-align:center;
+      backdrop-filter:blur(10px);
+      -webkit-backdrop-filter:blur(10px);
+      box-shadow:var(--shadow);
+      transition:all .18s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      border-color:rgba(255,191,90,0.24);
+    }
+
+    .card h3{
+      color:var(--yellow);
+      font-size:clamp(34px, 4vw, 52px);
+      margin-bottom:10px;
+      line-height:1.05;
+      font-weight:900;
+      letter-spacing:-1px;
+    }
+
+    .card p{
+      color:#f3f5f9;
+      font-size:16px;
+      line-height:1.55;
+    }
+
     .section{
       padding:34px 0;
+    }
+
+    .section-box{
+      width:min(var(--max-width), calc(100% - 40px));
+      margin:0 auto;
+      background:rgba(10,14,22,0.80);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:30px;
+      padding:36px;
+      backdrop-filter:blur(12px);
+      -webkit-backdrop-filter:blur(12px);
+      box-shadow:var(--shadow);
+    }
+
+    .section-label{
+      display:inline-flex;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      color:#ffd89a;
+      text-transform:uppercase;
+      font-size:12px;
+      font-weight:900;
+      letter-spacing:.8px;
+      margin-bottom:14px;
+    }
+
+    .section h2{
+      font-size:clamp(28px, 3.4vw, 46px);
+      line-height:1.08;
+      letter-spacing:-1px;
+      margin-bottom:14px;
+      color:#fff;
+    }
+
+    .section-intro{
+      color:#c8d2e2;
+      font-size:17px;
+      line-height:1.7;
+      max-width:900px;
+    }
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:26px;
+    }
+
+    .service-card{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:22px;
+      padding:24px;
+      transition:all .18s ease;
+    }
+
+    .service-card:hover{
+      transform:translateY(-4px);
+      border-color:rgba(255,191,90,0.24);
+    }
+
+    .service-card .icon{
+      font-size:28px;
+      margin-bottom:12px;
+    }
+
+    .service-card h3{
+      font-size:20px;
+      color:#fff;
+      margin-bottom:10px;
+    }
+
+    .service-card p{
+      color:#d0d9e8;
+      font-size:15px;
+      line-height:1.65;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:20px;
+      margin-top:26px;
+    }
+
+    .info-box{
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:24px;
+      padding:26px;
+    }
+
+    .info-box h3{
+      color:#fff;
+      font-size:22px;
+      margin-bottom:12px;
+    }
+
+    .info-box p{
+      color:#d0d9e8;
+      font-size:15px;
+      line-height:1.7;
+      margin-bottom:14px;
+    }
+
+    .info-box ul{
+      list-style:none;
+      display:grid;
+      gap:12px;
+      margin-top:10px;
+    }
+
+    .info-box li{
+      position:relative;
+      padding-left:18px;
+      color:#e8edf6;
+      line-height:1.65;
+    }
+
+    .info-box li::before{
+      content:"";
+      position:absolute;
+      left:0;
+      top:10px;
+      width:8px;
+      height:8px;
+      border-radius:50%;
+      background:linear-gradient(180deg, var(--orange), var(--orange-2));
+      box-shadow:0 0 0 5px rgba(255,140,0,0.10);
     }
 
     .contact{
@@ -141,19 +471,11 @@
       box-shadow:var(--shadow);
     }
 
-    .section-label{
+    .contact .section-label{
       display:flex;
       width:fit-content;
       margin:0 auto 16px;
       padding:10px 18px;
-      border-radius:999px;
-      background:rgba(255,255,255,0.05);
-      border:1px solid rgba(255,255,255,0.08);
-      color:#ffd89a;
-      text-transform:uppercase;
-      font-size:12px;
-      font-weight:900;
-      letter-spacing:.8px;
     }
 
     .contact-wrap h2{
@@ -178,16 +500,20 @@
     }
 
     .contato-lista{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
+      display:flex;
+      justify-content:center;
+      align-items:stretch;
       gap:18px;
       margin-top:14px;
+      flex-wrap:wrap;
     }
 
     .contact-card{
       display:flex;
       align-items:center;
       gap:18px;
+      width:100%;
+      max-width:360px;
       min-height:170px;
       background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
       border:1px solid rgba(255,255,255,0.08);
@@ -299,8 +625,17 @@
     }
 
     @media (max-width: 1080px){
-      .contato-lista{
+      .hero-inner{
+        grid-template-columns:1fr;
+      }
+
+      .cards,
+      .services-grid{
         grid-template-columns:1fr 1fr;
+      }
+
+      .grid-2{
+        grid-template-columns:1fr;
       }
     }
 
@@ -311,13 +646,8 @@
         padding:16px 0;
       }
 
-      .brand{
-        align-items:center;
-        text-align:left;
-      }
-
       .logo{
-        height:86px;
+        height:100px;
       }
 
       .brand-text strong{
@@ -329,24 +659,46 @@
         gap:16px;
       }
 
+      .hero{
+        padding:58px 0 40px;
+      }
+
+      .hero-left,
+      .section-box,
       .contact-wrap{
         padding:24px;
         border-radius:24px;
       }
 
-      .contato-lista{
+      .cards,
+      .services-grid{
         grid-template-columns:1fr;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .hero p,
+      .section-intro,
+      .contato-descricao{
+        font-size:16px;
       }
 
       .contact-wrap h2{
         font-size:40px;
       }
 
-      .contato-descricao{
-        font-size:16px;
-      }
-
       .contact-card{
+        max-width:100%;
         min-height:auto;
       }
     }
@@ -372,6 +724,140 @@
       </nav>
     </div>
   </header>
+
+  <section class="hero" id="sobre">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <span class="eyebrow">Agência de performance • lives • creators • dados</span>
+
+        <h1>
+          Alta performance para <span class="highlight">plataformas, marcas e operações</span> que querem crescer com creators e vendas ao vivo.
+        </h1>
+
+        <p>
+          A Click Live conecta dados, tecnologia e afiliados para gerar resultado real em vendas ao vivo.
+          Somos uma operação com escala, acompanhamento próximo e foco total em performance comercial para marcas, plataformas e projetos que querem crescer com estrutura.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/5581993054646" target="_blank" class="btn btn-primary">Quero ser parceiro</a>
+          <a href="#institucional" class="btn btn-secondary">Conhecer a operação</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-stat">
+          <span class="label">Pedidos gerados</span>
+          <div class="number">+410 mil</div>
+          <p>Volume de pedidos que reforça a capacidade de execução e escala da operação Click Live.</p>
+        </div>
+
+        <div class="hero-stat">
+          <span class="label">Movimento mensal</span>
+          <div class="number">+R$ 25 milhões</div>
+          <p>Resultados construídos com estratégia, afiliados qualificados e gestão orientada por dados.</p>
+        </div>
+
+        <div class="hero-stat">
+          <span class="label">Base ativa</span>
+          <div class="number">+1.500 afiliados</div>
+          <p>Rede em expansão com acompanhamento, capacitação e direcionamento de performance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="metrics" id="resultados">
+    <div class="cards">
+      <div class="card">
+        <h3>+1.500</h3>
+        <p>Afiliados ativos em uma estrutura com acompanhamento, capacitação e foco em crescimento contínuo.</p>
+      </div>
+
+      <div class="card">
+        <h3>+410 mil</h3>
+        <p>Pedidos gerados com operação, gestão e estratégia comercial voltadas para escala de verdade.</p>
+      </div>
+
+      <div class="card">
+        <h3>+R$ 25 mi</h3>
+        <p>Em volume mensal movimentado, conectando creators, performance e inteligência de dados.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="servicos">
+    <div class="section-box">
+      <span class="section-label">O que entregamos</span>
+      <h2>Uma operação completa para marcas e plataformas escalarem com afiliados</h2>
+      <p class="section-intro">
+        A Click Live atua com gestão, inteligência e execução para transformar campanhas em resultado. Nossa estrutura combina seleção estratégica de afiliados, acompanhamento em tempo real das ações e leitura de performance com apoio de tecnologia própria.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">📈</div>
+          <h3>Gestão de performance</h3>
+          <p>Planejamento, acompanhamento e otimização contínua de campanhas com foco em vendas, escala e constância.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">🎯</div>
+          <h3>Seleção estratégica</h3>
+          <p>Conexão entre marcas, plataformas e afiliados com perfil alinhado ao objetivo e ao momento de cada operação.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon">🧠</div>
+          <h3>Inteligência de dados</h3>
+          <p>Leitura de resultados e decisões orientadas por dados com apoio do ecossistema Click Live e ferramentas próprias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="institucional">
+    <div class="section-box">
+      <span class="section-label">Institucional</span>
+      <h2>Estrutura, método e escala para performance de verdade</h2>
+      <p class="section-intro">
+        A Click Live é uma agência de marketing de performance especializada em creators, lives e vendas em plataforma. Unimos tecnologia, operação e capacitação para gerar crescimento com consistência.
+      </p>
+
+      <div class="grid-2">
+        <div class="info-box">
+          <h3>Quem somos</h3>
+          <p>
+            Somos uma agência com forte atuação em performance comercial, presença consolidada em operações de live e expansão para novas frentes e plataformas. Nosso trabalho une execução, estratégia e acompanhamento próximo para escalar resultados com mais previsibilidade.
+          </p>
+
+          <h3 style="margin-top:18px;">Modelo de atuação</h3>
+          <ul>
+            <li>Ativação e gestão de afiliados com foco direto em performance</li>
+            <li>Suporte estratégico e operacional para campanhas em escala</li>
+            <li>Planejamento comercial, produtos âncora e direcionamento de ações</li>
+            <li>Uso de tecnologia e análise de dados para decisões mais rápidas</li>
+          </ul>
+        </div>
+
+        <div class="info-box">
+          <h3>Metodologia de capacitação</h3>
+          <ul>
+            <li>Trilha estruturada de evolução para afiliados em diferentes níveis</li>
+            <li>Conteúdo prático sobre primeiros passos, retenção, conversão e engajamento</li>
+            <li>Mentorias e acompanhamento com foco em execução real</li>
+            <li>Painel exclusivo para leitura de resultados e evolução da operação</li>
+            <li>Rankings, incentivos e campanhas de destaque para acelerar performance</li>
+          </ul>
+
+          <h3 style="margin-top:18px;">Diferencial Click Live</h3>
+          <p>
+            Mais do que conectar afiliados, a Click Live estrutura uma operação com método, leitura de dados e acompanhamento real. Isso permite mais eficiência, mais organização e melhores decisões para escalar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="section contact" id="contato">
     <div class="contact-wrap">
@@ -436,7 +922,7 @@
           </div>
           <div class="contact-text">
             <small>Instagram</small>
-            <strong>@clicklive2025</strong>
+            <strong>Acessar perfil</strong>
             <span>Conteúdos, posicionamento de marca e atualizações da operação Click Live.</span>
             <div class="contact-action">
               Ver perfil
