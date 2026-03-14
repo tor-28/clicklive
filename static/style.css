@@ -513,6 +513,7 @@ nav a:hover{
   backdrop-filter:blur(10px);
   -webkit-backdrop-filter:blur(10px);
   box-shadow:0 10px 25px rgba(0,0,0,0.22);
+  overflow:hidden;
 }
 
 .contact-card:hover{
@@ -551,6 +552,7 @@ nav a:hover{
 
 .contact-text{
   flex:1;
+  min-width:0;
 }
 
 .contact-text small{
@@ -567,6 +569,8 @@ nav a:hover{
   font-size:18px;
   line-height:1.45;
   margin-bottom:10px;
+  overflow-wrap:anywhere;
+  word-break:break-word;
 }
 
 .contact-text span{
@@ -707,3 +711,5 @@ footer{
     min-height:auto;
   }
 }
+
+aumente so as caixas um pouco 
