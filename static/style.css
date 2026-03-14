@@ -391,6 +391,57 @@ nav a:hover{
   line-height:1.65;
 }
 
+.operation-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+  margin-top:28px;
+}
+
+.operation-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:24px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:all .18s ease;
+}
+
+.operation-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(255,191,90,0.24);
+}
+
+.operation-image{
+  width:100%;
+  height:320px;
+  overflow:hidden;
+  background:rgba(255,255,255,0.02);
+}
+
+.operation-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.operation-content{
+  padding:22px;
+}
+
+.operation-content h3{
+  font-size:22px;
+  color:#fff;
+  margin-bottom:10px;
+}
+
+.operation-content p{
+  color:#d0d9e8;
+  font-size:15px;
+  line-height:1.65;
+}
+
 .grid-2{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -492,7 +543,7 @@ nav a:hover{
   display:flex;
   justify-content:center;
   align-items:stretch;
-  gap:18px;
+  gap:22px;
   margin-top:14px;
   flex-wrap:nowrap;
   width:100%;
@@ -503,8 +554,8 @@ nav a:hover{
   align-items:center;
   gap:18px;
   flex:1 1 0;
-  max-width:340px;
-  min-height:170px;
+  max-width:365px;
+  min-height:185px;
   background:linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
   border:1px solid rgba(255,255,255,0.08);
   border-radius:24px;
@@ -624,7 +675,8 @@ footer{
   }
 
   .cards,
-  .services-grid{
+  .services-grid,
+  .operation-grid{
     grid-template-columns:1fr 1fr;
   }
 
@@ -674,7 +726,8 @@ footer{
   }
 
   .cards,
-  .services-grid{
+  .services-grid,
+  .operation-grid{
     grid-template-columns:1fr;
   }
 
@@ -696,6 +749,10 @@ footer{
     font-size:16px;
   }
 
+  .operation-image{
+    height:260px;
+  }
+
   .contact-wrap h2{
     font-size:40px;
   }
@@ -711,5 +768,3 @@ footer{
     min-height:auto;
   }
 }
-
-aumente so as caixas um pouco 
