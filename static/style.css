@@ -705,16 +705,20 @@ img{
 
 .case-image-wrap{
   position:relative;
-  min-height:390px;
+  height:390px;
   overflow:hidden;
   background:#0c1119;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:14px;
 }
 
 .case-image-wrap img{
   width:100%;
-  height:390px;
+  height:100%;
   display:block;
-  object-fit:cover;
+  object-fit:contain;
   object-position:center;
   transition:transform .4s ease;
 }
@@ -1134,9 +1138,12 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .case-image-wrap,
-  .case-image-wrap img{
+  .case-image-wrap{
     height:460px;
+  }
+
+  .case-image-wrap img{
+    height:100%;
   }
 }
 
@@ -1267,9 +1274,13 @@ footer{
     font-size:27px;
   }
 
-  .case-image-wrap,
-  .case-image-wrap img{
+  .case-image-wrap{
     height:360px;
+    padding:10px;
+  }
+
+  .case-image-wrap img{
+    height:100%;
   }
 
   .case-content{
@@ -1365,8 +1376,12 @@ footer{
     font-size:32px;
   }
 
-  .case-image-wrap,
-  .case-image-wrap img{
+  .case-image-wrap{
     height:310px;
+    padding:8px;
+  }
+
+  .case-image-wrap img{
+    height:100%;
   }
 }
